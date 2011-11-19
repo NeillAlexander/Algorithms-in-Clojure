@@ -1,0 +1,11 @@
+h1. Algorithms in Clojure
+
+I'm currently reading "Algorithms in Java 1-4" by Robert Sedgewick. This project contains little snippets of code I have written to help my understanding. Only I'm not writing them in Java. Oh no, that wouldn't be fun. I'm writing them in Clojure.
+
+Be warned - there is no guarantee that this is idiomatic Clojure. I'm pretty much just translating the code from the book into Clojure.
+
+h2. License
+
+Copyright (C) 2011 Neill Alexander
+
+Distributed under the Eclipse Public License, the same as Clojure.
