@@ -4,6 +4,35 @@ import java.util.Arrays;
 
 public class QuickUW {
 	
+	public static void withHalving() {
+		System.out.println("Broken");
+		int N = 10;
+		int id[] = new int[N], sz[] = new int[N];
+		for (int i = 0; i < N; i++) {
+			id[i] = i;
+			sz[i] = 1;
+		}
+		for (In.init(); !In.empty();) {
+			System.out.println(Arrays.toString(id));
+			System.out.println(Arrays.toString(sz));
+			int i, j, p = In.getInt(), q = In.getInt();
+		    for (i = p; i != id[i]; i = id[i])
+		        id[i] = id[id[i]];
+		      for (j = q; j != id[j]; j = id[j])
+		        id[j] = id[id[j]];
+			if (i == j)
+				continue;
+			if (sz[i] < sz[j]) {
+				id[j] = i;
+				sz[j] += sz[i];
+			} else {
+				id[i] = j;
+				sz[i] += sz[j];
+			}
+			System.out.println(" " + p + " " + q);
+		}			
+	}
+	
 	public static void brokenVersion() {
 		System.out.println("Broken");
 		int N = 10;
@@ -63,8 +92,9 @@ public class QuickUW {
 	}
 	
 	public static void main(String[] args) {
-		brokenVersion();
-		fixedVersion();
+//		brokenVersion();
+//		fixedVersion();
+		withHalving();
 	}
 	
 	private static class In {
